@@ -22,7 +22,8 @@ public class Main {
 
     }
     public static void main(String[] args) {
-	// write your code here
+	    //System in out err getenv getProperties getProperty
+        //getProperties();
         getenv();
     }
 }
