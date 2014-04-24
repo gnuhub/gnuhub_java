@@ -1,5 +1,7 @@
 package com.gnuhub;
 
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Properties;
 
 public class Main {
@@ -8,8 +10,19 @@ public class Main {
         properties = System.getProperties();
         properties.list(System.out);
     }
+    public static void getenv() {
+        Map<String,String> map = System.getenv();
+        Iterator<String> iterator = map.keySet().iterator();
+        String key,value;
+        while (iterator.hasNext()){
+            key = iterator.next();
+            value = map.get(key);
+            System.out.println(key + "=" + value);
+        }
+
+    }
     public static void main(String[] args) {
 	// write your code here
-        getProperties();
+        getenv();
     }
 }
